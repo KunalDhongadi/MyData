@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/settings_menu"
+        android:icon="@drawable/ic_setting_menu_icon"
+        android:title="Settings"
+        app:showAsAction="ifRoom">
+
+<!--        <item android:id="@+id/dark_mode"-->
+<!--            android:title="Dark Mode"-->
+<!--            android:checkable = "true"-->
+<!--            app:showAsAction="never"-->
+<!--            />-->
+
+        <item android:id="@+id/retrievals_info"
+            android:title="Retrievals"
+            app:showAsAction="never"/>
+
+        <item android:id="@+id/delete_data"
+            android:title="Delete Data"
+            app:showAsAction="never"/>
+
+        <item android:id="@+id/log_off"
+            android:title="Log Off"
+            app:showAsAction="never"/>
+
+    </item>
+
+
+
+
+</menu>

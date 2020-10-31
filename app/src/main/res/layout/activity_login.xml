@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/backgroundColor"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+
+        <ImageView
+            android:id="@+id/login_logoView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:transitionName="logo"
+            app:srcCompat="@drawable/download" />
+
+        <TextView
+            android:id="@+id/logo_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="@color/greyColor"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:transitionName="logo_text"
+            android:typeface="normal" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/noto_sans"
+            android:text="Please select your country code and enter your phone number"
+            android:textAlignment="center"
+            android:textColor="@color/greyColor"
+            android:textSize="16sp" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/phoneno_input"
+            android:padding="8dp"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_countryPreference="IN,SG,GB,US"
+            app:ccp_showFlag="false"
+            app:ccp_textGravity="LEFT"
+            app:ccpDialog_keyboardAutoPopup="false"
+            app:ccpDialog_showCloseIcon="true"
+            />
+
+        <EditText
+            android:id="@+id/phone_no"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/phoneno_input"
+            android:drawableLeft="@drawable/ic_phone_icon"
+            android:drawablePadding="18dp"
+            android:hint="Phone Number"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/phone_no_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="16dp"
+            android:text="This place is for error"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:background="@drawable/rounded_btn"
+            android:clickable="true"
+            android:enabled="true"
+            android:focusable="true"
+            android:fontFamily="@font/nobile"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:paddingBottom="16dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="16dp"
+            android:text="Get OTP"
+            android:textColor="@color/whiteColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:transitionName="login_btn" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

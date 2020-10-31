@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:id="@+id/coordinator_layout"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add your data by clicking the floating button below."
+        android:textSize="16sp"
+        android:fontFamily="@font/noto_sans"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/add_data_msg" />
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:liftOnScroll="true"
+        app:elevation="0dp"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/top_toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@color/backgroundColor"
+            app:title="MyData"
+            app:titleTextColor="@color/colorAccent"
+            app:menu="@menu/settings_menu"
+            style="@style/AppTheme.AppBarOverlay"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_anchorGravity="bottom|center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/nested_scroll_view"
+        >
+
+        <!--Main Linear Layout-->
+        <LinearLayout
+            android:id="@+id/list_views_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:clipToPadding="false">
+
+            <!--Personal Data Linear Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                android:background="@drawable/contactd_list_view"
+                android:elevation="4dp"
+                android:outlineProvider="bounds"
+                android:clipToPadding="false"
+                android:scrollbars="none">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Personal"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="22sp" />
+
+                <ListView
+                    android:id="@+id/list_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:clipToPadding="false"
+                    />
+            </LinearLayout>
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0.5dp"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:background="@color/colorPrimary"/>-->
+
+            <!--Contact Data Linear Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/personald_list_view"
+                android:elevation="4dp"
+                android:scrollbars="none"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="22sp" />
+
+                <ListView
+                    android:id="@+id/list_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:clipToPadding="false"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add_data_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:transitionName="add_data"
+        android:fontFamily="@font/nobile"
+        android:padding="16dp"
+        android:text="Add"
+        android:textAllCaps="true"
+        android:textColor="@color/whiteColor"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="6dp"
+        app:icon="@drawable/ic_add_icon"
+        app:iconTint="@color/whiteColor"
+        app:strokeColor="@color/onpressedButton"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

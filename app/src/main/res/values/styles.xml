@@ -1,0 +1,71 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="background">@color/backgroundColor</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+        <item name="android:itemBackground">@color/backgroundColor</item>
+
+
+        <item name="materialCalendarStyle">@style/Widget.MaterialComponents.MaterialCalendar</item>
+        <item name="materialCalendarFullscreenTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar.Fullscreen</item>
+        <item name="materialCalendarTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar</item>
+
+
+<!--        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!--For main Activity(Fab)-->
+    <style name="AppTheme.MainActivity" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="background">@color/backgroundColor</item>
+    </style>
+
+    <!--For splash screen -->
+    <style name="SplashScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!--        <item name="android:navigationBarColor">@color/colorPrimary</item>-->
+        <item name="colorPrimaryDark">@color/backgroundColor</item>
+
+    </style>
+
+    <style name="ShapeAppearanceOverlayExtended" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="" >
+        <item name="android:fontFamily">@font/raleway_light</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+<!--    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">-->
+<!--        &lt;!&ndash; Required for pre-Lollipop. &ndash;&gt;-->
+<!--        <item name="overlapAnchor">false</item>-->
+<!--        <item name="android:dropDownVerticalOffset">-4.0dip</item>-->
+<!--    </style>-->
+
+<!--    <style name="ToolbarColored" parent="AppTheme">-->
+<!--        <item name="android:textColorSecondary">@color/colorPrimary</item>-->
+<!--    </style>-->
+
+    <style name="OtpWidget.OtpView" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+</resources>

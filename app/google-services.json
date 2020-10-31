@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "322219672880",
+    "firebase_url": "https://mydata-89c42.firebaseio.com",
+    "project_id": "mydata-89c42",
+    "storage_bucket": "mydata-89c42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322219672880:android:564f4f3074edc2701434f5",
+        "android_client_info": {
+          "package_name": "com.kunaldhongadi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322219672880-9pkii8tqp9ckbk6joihrsqhkieq3ks4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1JIaslZaacjONCgJpArp8xX5Ohv7EpJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322219672880-9pkii8tqp9ckbk6joihrsqhkieq3ks4i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
